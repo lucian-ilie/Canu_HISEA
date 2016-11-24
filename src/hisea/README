@@ -1,0 +1,65 @@
+*** HISEA PROGRAM README ***
+
+-- DESCRIPTION --
+
+HISEA is an efficient all-vs-all long read aligner for SMRT sequencing data. Its algorithm is designed to produce highest alignment sensitivity among others. The detailed comparison of HISEA with other leading programs can be found in HISEA paper (Nilesh Khiste and Lucian Ilie).
+
+   USAGE:
+     hisea [--self] [--kmerLen  <int>] [--minStoreLen <int>] [--minOlapLen <int>] --ref <file/directory> --query <file/directory>
+
+     For full list of options type "hisea --help"
+
+   OUTPUT:
+     stdout  List of alignments
+
+-- INSTALLATION --
+
+After extracting the files into the desired installation directory,
+change directory to "HISEA".  Once in this directory, type: "make"
+
+This command will build the hisea binary. If you see any error messages, please
+contact authors.
+
+-- RUNNING HISEA --
+
+The HISEA program can be used with fastA/fastQ files with one or more sequences. The program can be run in both serial and parallel mode. The parallel mode has an advantage in terms of time with respect to serial mode.
+
+The valid set of options for hisea program are:
+
+Options:
+--help         no_arg     Print this help message
+--self         no_arg     Align set of reads with itself. Use only --ref option
+--ref          <file/dir> The name of the reference fasta/fastq file or directory
+                          containing these files
+--query        <file/dir> The name of the query fasta/fastq file or directory
+                          containing these files
+--ignore       <file>     The file containing kmers to be ignored
+--index_write  <dir>      The directory where index is stored
+--index_read   <dir>      The directory from whcih index is read
+--kmerLen      <int>      This is the kmer length used for initial hashing.
+                          The possible values are 10-20, both inclusive
+                          default=16
+--smallkmerLen <int>      This is the kmer length used during alignment extension.
+                          The possible values are 10-20, both inclusive
+                          default=12
+--filterCount  <int>      This is used for initial filtering. This must be set to 1,
+                          if index is created with split set of reads.
+                          default=2
+--threads      <int>      Number of threads for parallel run
+                          default=1
+--minOlapLen   <int>      Minimum Overlap length
+                          default=100
+--minStoreLen  <int>      Minimum read length. Overlap of two smaller reads is ignored
+                          default=100
+--minMatches   <int>      Minimum number of matches to be considered for alignment
+                          default=3
+--maxKmerHits  <int>      The maximum number of repeat kmers
+                          default=10000
+--errorRate    <float>    Error rate. Valid values are 0-1 percent
+                          default=0.15
+--maxShift     <float>    The value of shift to accomodate indels. Valid values
+                          are 0-1 percent
+                          default=0.20
+
+
+ 
