@@ -37,11 +37,13 @@ my $hash     = undef;   #  This from 'git describe'
 my $dirty    = "";
 my $firstRev = undef;   #  This from 'git rev-list'
 my $revCount = 0;
+my $var = 0;
 
 
 #  If in a git repo, we can get the actual values.
 
-if (-d "../.git") {
+#if (-d "../.git") {
+if ($var) {
 
     open(F, "git rev-list HEAD |") or die "Failed to run 'git rev-list'.\n";
     while (<F>) {
