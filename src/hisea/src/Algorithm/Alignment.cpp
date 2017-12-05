@@ -413,21 +413,21 @@ void Alignment::findAllAlignments()
                     if (m == REVERSE){
                         std::cout << std::setw(5) << i+1 << " " << std::setw(5) << read+1 << " " << std::setw(5) << "0" << " " << "0" 
                             << " " << "0" << " " << qLeft+1 <<" " << (qRight+size) << " " << qSize << " " << m << " " 
-                            << refSize - (rRight +  size) + 1 << " " <<  refSize - rLeft << " " << refSize <<  std::endl;
+                            << refSize - (rRight +  size) + 1 << " " <<  refSize - rLeft << " " << refSize <<  "\n";
                     }else {
                         std::cout << std::setw(5) << i+1 << " " << std::setw(5) << read+1 << " " << std::setw(5) << "0" << " " << "0" 
                             << " " << "0" << " " << qLeft+1 <<" " << (qRight+size) << " " << qSize << " " << m << " " 
-                            << rLeft+1 << " " <<  (rRight+size) << " " << refSize <<  std::endl;
+                            << rLeft+1 << " " <<  (rRight+size) << " " << refSize <<  "\n";
                     }
                 }else {
                     if (m == REVERSE){
                         std::cout << std::setw(5) << num_Ref_Seq+i+1 << " " << std::setw(5) << read+1 << " " << std::setw(5) << "0" << " " << "0" 
                             << " " << "0" << " " << qLeft+1 <<" " << (qRight+size) << " " << qSize << " " << m << " " 
-                            << refSize - (rRight +  size) + 1 << " " <<  refSize - rLeft << " " << refSize <<  std::endl;
+                            << refSize - (rRight +  size) + 1 << " " <<  refSize - rLeft << " " << refSize <<  "\n";
                     }else {
                         std::cout << std::setw(5) << num_Ref_Seq+i+1 << " " << std::setw(5) << read+1 << " " << std::setw(5) << "0" << " " << "0" 
                             << " " << "0" << " " << qLeft+1 <<" " << (qRight+size) << " " << qSize << " " << m << " " 
-                            << rLeft+1 << " " <<  (rRight+size) << " " << refSize <<  std::endl;
+                            << rLeft+1 << " " <<  (rRight+size) << " " << refSize <<  "\n";
                     }
                 }
             }

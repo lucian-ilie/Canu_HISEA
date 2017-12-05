@@ -194,5 +194,6 @@ int main(int argc, char** argv)
         alignmentObj.Initialize(refReader, queryReader, options);
     alignmentObj.findAllAlignments();
     cerr << "***************   Done Finding Alignments   ***************" << endl;
+    fflush(0);
 }
 
