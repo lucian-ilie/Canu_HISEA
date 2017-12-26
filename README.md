@@ -83,5 +83,9 @@ For usage specific to HISEA configuration, please look at our [webpage](http://w
 
 ## Citation:
 
-Coming soon - to be updated
+If you find Canu+HISEA pipeline useful, please cite the HISEA paper:
+
+N. Khiste, L. Ilie [HISEA: HIerarchical SEed Aligner for PacBio data](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-017-1953-9) BMC Bioinformatics, 2017
+
+
  
